@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de inscrição</title>
+    <link rel="stylesheet" href="CSS/styleForms.css">
+</head>
+
+<body>
+    <!--Formulário de inscrição para o clube de aventuras -->
+    <form id="meuFormulário">
+        <!--Campo de entrada para o nome-->
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" placeholder="Digite seu nome">
+
+        <!--Campo de entrada para a idade-->
+        <label for="idade">Idade</label>
+        <input type="text" id="idade" placeholder="Digite sua idade">
+
+        <!--Área de texto para uma mensagem-->
+        <label for="mensagem">Por que você quer se juntar ao clube?</label>
+        <textarea name="mensagem" id="mensagem" placeholder="Escreva uma mensagem"></textarea>
+
+        <!--Lista de opção para selecionar uma aventura favorita-->
+        <label for="aventura">Aventura favorita</label>
+        <select name="aventura" id="aventura">
+            <option value="explorar_floresta">Explorar a floresta</option>
+            <option value="mergulho">Mergulho</option>
+            <option value="escalada">Escalada</option>
+        </select>
+
+        <!--Botão para enviar o formulário-->
+        <button type="submit"> Enviar </button>
+
+        <script>
+            //Capturando o formulário pelo ID
+            const form = document.getElementById('meuFormulário')
+
+            //Adicionando um event listener para o evento de submissão do formulário
+            form.addEventListener('submit', function (event) {
+                //Prevenir o comportamnto padrão de envio do formulário
+                event.preventDefault();
+
+                //Capturar os dados do formulário
+                const nome = document.getElementById('nome').value;
+                const idade = document.getElementById('idade').value;
+                const mensagem = document.getElementById('mensagem').value;
+                const aventura = document.getElementById('aventura');
+
+                //Redirecionar para outra página HTML com os dados URL
+                window.location.href = `resultado.html ?
+                    nome = ${ encodeURIComponent(nome) }&idade=${ encodeURIcomponent(idade) }&mensagem=${ encodeURIcomponent(mensagem) }&aventura=${ encodeURIcomponent(aventura) }`;
+            });
+        </script>
+
+</body>
+
+</html>
