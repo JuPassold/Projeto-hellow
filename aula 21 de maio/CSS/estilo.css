@@ -1,0 +1,20 @@
+p {
+    color: rgb(238, 23, 148);
+    background-color: paleturquoise;
+    font-family:monospace;
+    font-size: 160%;
+    border: rgb(238, 23, 148)solid 10px;
+}
+
+h1 {
+    color: paleturquoise;
+    background-color: rgb(238, 23, 148);
+    font-family: cursive;
+    font-size: 300%;
+    border-radius: 5px 5px 5px 5px;
+
+}
+
+body{
+    background-color: paleturquoise;
+}
