@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcador ID em JavaScript</title>
+</head>
+<body>
+    <h2>Usando o atributo ID em JavaScript</h2>
+    <p>JavaScript pode acessar um elemento com id especifíco usando getElementById() metodo:</p>
+
+    <h1 id="myHeader">Olá Meninas!</h1>
+    <button onclick="displayResult()">Mudar texto</button>
+
+    <script>
+        function displayResult() {
+            document.getElementById("myHeader").innerHTML = "Vocês são poderosas!";
+        }
+    </script>
+</body>
+</html>
